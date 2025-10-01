@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "type": "coreclr",
+      "request": "launch",
+      "name": "Launch .NET Console App",
+      "program": "${workspaceFolder}/bin/Debug/net9.0/psc-lista-04.exe",
+      "preLaunchTask": "build",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}
