@@ -77,14 +77,14 @@ namespace psc_lista_04.Models
                     user = Console.ReadLine();
                     Console.WriteLine("Digine sua senha:");
                     pass = Console.ReadLine();
-                    if (user == pass)
-                    {
-                        throw new Exception("A senha não pode ser igual ao nome de usuário. Tente novamente.");
-                    }
-                    else
                     if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
                     {
                         throw new Exception("Usuário e senha não podem ser vazios. Tente novamente.");
+                    }
+                    else
+                    if (user == pass)
+                    {
+                        throw new Exception("A senha não pode ser igual ao nome de usuário. Tente novamente.");
                     }
                     else
                     {
