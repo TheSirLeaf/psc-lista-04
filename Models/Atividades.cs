@@ -233,15 +233,15 @@ namespace psc_lista_04.Models
                               "mantidas as taxas de crescimento.");
             Console.WriteLine("====================================");
             int ano = 0;
-            int popA = 80000;
-            int popB = 200000;
+            double popA = 80000;
+            double popB = 200000;
             double crescimentoA = 0.03;
             double crescimentoB = 0.015;
             for (int i = 0; popA < popB; i++)
             {
-                popA += (int)(popA * crescimentoA);
-                popB += (int)(popB * crescimentoB);
-                Console.WriteLine($"Ano {i}, Pop A: {popA} // Pop B: {popB}");
+                popA += popA * crescimentoA;
+                popB += popB * crescimentoB;
+                Console.WriteLine($"Ano {i}, Pop A: {(int)popA} // Pop B: {(int)popB}");
                 ano = i;
             }
             Console.WriteLine("====================================");
@@ -262,8 +262,8 @@ namespace psc_lista_04.Models
             Console.WriteLine("====================================");
             bool repetir = true;
             int ano;
-            int popA;
-            int popB;
+            double popA;
+            double popB;
             double crescimentoA;
             double crescimentoB;
             while (repetir)
@@ -281,9 +281,9 @@ namespace psc_lista_04.Models
                     crescimentoB = Convert.ToDouble(Console.ReadLine());
                     for (int i = 0; popA < popB; i++)
                     {
-                        popA += (int)(popA * crescimentoA);
-                        popB += (int)(popB * crescimentoB);
-                        Console.WriteLine($"Ano {i}, Pop A: {popA} // Pop B: {popB}");
+                        popA += popA * crescimentoA;
+                        popB += popB * crescimentoB;
+                        Console.WriteLine($"Ano {i}, Pop A: {(int)popA} // Pop B: {(int)popB}");
                         ano = i;
                     }
                     Console.WriteLine("====================================");
@@ -336,6 +336,8 @@ namespace psc_lista_04.Models
             {
                 Console.Write(i + " ");
             }
+            Console.WriteLine("");
+            Console.WriteLine("====================================");
         }
         /// <summary>
         /// Faça um programa que leia 5 números e informe o maior número.
@@ -412,8 +414,10 @@ namespace psc_lista_04.Models
                 }
             }
             double media = soma / 5.0;
+            Console.WriteLine("====================================");
             Console.WriteLine($"A soma dos números digitados é: {soma}");
             Console.WriteLine($"A média dos números digitados é: {media}");
+            Console.WriteLine("====================================");
         }
         /// <summary>
         /// Faça um programa que imprima na tela apenas os números ímpares entre 1 e
@@ -429,9 +433,11 @@ namespace psc_lista_04.Models
             {
                 if (i % 2 != 0)
                 {
-                    Console.WriteLine(i);
+                    Console.Write(i + " ");
                 }
             }
+            Console.WriteLine("");
+            Console.WriteLine("====================================");
         }
         /// <summary>
         /// Faça um programa que receba dois números inteiros e gere os números
@@ -475,10 +481,13 @@ namespace psc_lista_04.Models
             int inicio = Math.Min(num1, num2);
             int fim = Math.Max(num1, num2);
             Console.WriteLine($"Números inteiros entre {inicio} e {fim}:");
+            Console.WriteLine("====================================");
             for (int i = inicio + 1; i < fim; i++)
             {
-                Console.WriteLine(i);
+                Console.Write(i + " ");
             }
+            Console.WriteLine("");
+            Console.WriteLine("====================================");
         }
     }
 }
